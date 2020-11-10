@@ -1,3 +1,8 @@
+<!--
+ * @Description: 发布群聊
+ * @Author: fengxl
+ * @Date: 2020-11-10
+-->
 <template>
   <div>
     <van-nav-bar title="发起群聊" left-arrow />

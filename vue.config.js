@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path')
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -48,7 +48,7 @@ module.exports = {
     overlay: {
       warnings: true,
       errors: true
-    }
+    },
     // proxy: {
     //   '/': {
     //     target: config.domain,
@@ -57,6 +57,11 @@ module.exports = {
     //       '^/': '/'
     //     }
     //   }
+    // }
+    // historyApiFallback: {
+    //   rewrites: [
+    //     { from: /.*/, to: path.posix.join('/', '404'), }
+    //   ],
     // }
   },
   chainWebpack: config => {

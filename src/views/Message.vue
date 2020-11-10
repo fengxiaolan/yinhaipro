@@ -1,3 +1,8 @@
+<!--
+ * @Description: 消息
+ * @Author: fengxl
+ * @Date: 2020-11-10
+-->
 <template>
   <div>
     <van-cell>
@@ -83,7 +88,7 @@ export default {
         text-align: center;
         padding: 0 3px;
         line-height: 34px;
-        font-size: 12px;
+        font-size: 18px;
         color: #fff;
         border: 1px solid #fff;
       }

@@ -5,6 +5,9 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
+// 引入公共样式
+import "./assets/style/reset.less";
+
 // 配置请求
 import axios from "axios";
 Vue.prototype.$axios = axios;

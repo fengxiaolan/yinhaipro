@@ -4,32 +4,21 @@
       <div class="content">
         <router-view />
       </div>
-      <div class="bottom-bar">
-        <van-tabbar v-model="active">
-          <van-tabbar-item name="home" to="/home" icon="home-o"
-            >首页</van-tabbar-item
-          >
-          <van-tabbar-item name="message" to="/message" icon="smile-o"
-            >消息</van-tabbar-item
-          >
-          <van-tabbar-item name="address" to="/address" icon="smile-o"
-            >通讯录</van-tabbar-item
-          >
-          <van-tabbar-item name="about" to="/about" icon="smile-o"
-            >我的</van-tabbar-item
-          >
-        </van-tabbar>
+      <div class="bottom-bar" >
+        <tabbar></tabbar>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import tabbar from "@/components/tabbar";
 export default {
   name: "LAYOUT",
+  components: {tabbar},
   data() {
     return {
-      active: "home"
+
     };
   }
 };

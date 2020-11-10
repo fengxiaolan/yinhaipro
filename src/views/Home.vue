@@ -1,3 +1,8 @@
+<!--
+ * @Description: 首页
+ * @Author: fengxl
+ * @Date: 2020-11-10
+-->
 <template>
   <div class="container">
     <div class="top-box">
