@@ -1,32 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="home">
+      <div class="content">
+        <router-view />
+      </div>
+      <div class="bottom-bar">
+        <van-tabbar v-model="active">
+          <van-tabbar-item name="home" to="/home" icon="home-o"
+            >首页</van-tabbar-item
+          >
+          <van-tabbar-item name="message" to="/message" icon="smile-o"
+            >消息</van-tabbar-item
+          >
+          <van-tabbar-item name="address" to="/address" icon="smile-o"
+            >通讯录</van-tabbar-item
+          >
+          <van-tabbar-item name="about" to="/about" icon="smile-o"
+            >我的</van-tabbar-item
+          >
+        </van-tabbar>
+      </div>
     </div>
-    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: "LAYOUT",
+  data() {
+    return {
+      active: "home"
+    };
+  }
+};
+</script>
 
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.bottom-bar {
+  height: 98px;
+}
+.content {
+  flex: 1;
+  overflow: auto;
 }
 </style>
